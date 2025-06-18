@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hakkımda | Avukat Metin Maaşoğlu</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sans': ['Lato', 'sans-serif'],
+            'serif': ['Merriweather', 'serif'],
+          },
+          colors: {
+            'brand-gold': '#c0a062',
+          }
+        }
+      }
+    }
+  </script>
+
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- ================================== -->
+  <!--        NAVİGASYON ÇUBUĞU           -->
+  <!-- ================================== -->
+  <header id="navbar" class="sticky top-0 left-0 w-full py-4 px-8 flex justify-between items-center z-50 transition-colors duration-300 bg-slate-900 shadow-lg">
+    <a href="index.html" class="flex items-center space-x-3">
+      <svg class="h-8 w-8 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3.75v16.5"/></svg>
+      <span class="text-xl font-bold text-white font-serif">Maaşoğlu Hukuk</span>
+    </a>
+    <nav class="hidden md:flex space-x-8 text-sm font-medium">
+      <a href="index.html" class="text-white hover:text-brand-gold transition-colors">Ana Sayfa</a>
+      <a href="about.html" class="text-white hover:text-brand-gold transition-colors">Hakkımda</a>
+      <a href="services.html" class="text-white hover:text-brand-gold transition-colors">Hizmet Alanları</a>
+      <a href="articles.html" class="text-white hover:text-brand-gold transition-colors">Makaleler</a>
+      <a href="contact.html" class="text-white hover:text-brand-gold transition-colors">İletişim</a>
+    </nav>
+  </header>
+
+  <!-- ================================== -->
+  <!--        SAYFA BAŞLIĞI BÖLÜMÜ        -->
+  <!-- ================================== -->
+  <section class="pt-24 pb-16 bg-gradient-to-br from-slate-900 to-slate-800 text-center text-white">
+    <div class="max-w-4xl mx-auto px-6">
+      <h1 class="text-4xl md:text-5xl font-bold font-serif">Avukat Metin Maaşoğlu</h1>
+      <p class="mt-4 text-lg text-gray-300">10 yılı aşkın tecrübe ile hukukun ve adaletin hizmetinde.</p>
+    </div>
+  </section>
+
+  <!-- ================================== -->
+  <!--         DETAYLI HAKKIMDA İÇERİĞİ   -->
+  <!-- ================================== -->
+  <section class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-16 items-start">
+      
+      <!-- Sol Sütun: Fotoğraf -->
+      <div class="md:col-span-1">
+        <div class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg shadow-lg flex items-center justify-center overflow-hidden">
+            <!-- Buraya 400x400 veya 500x500 gibi kare bir fotoğraf ekleyin -->
+            <img src="https://via.placeholder.com/500" alt="Avukat Metin Maaşoğlu" class="w-full h-full object-cover">
+        </div>
+      </div>
+      
+      <!-- Sağ Sütun: Biyografi -->
+      <div class="md:col-span-2">
+        <h2 class="text-3xl font-serif font-bold text-slate-800 mb-6">Biyografi</h2>
+        <div class="space-y-6 text-gray-700 text-lg leading-relaxed">
+            <p>1985 yılında Gaziantep'te doğan Avukat Metin Maaşoğlu, lise eğitimini tamamladıktan sonra hukuk alanındaki tutkusunu takip ederek 2008 yılında Ankara Üniversitesi Hukuk Fakültesi'ne girmiştir. 2012 yılında başarıyla mezun olmuştur.</p>
+            <p>Yasal stajını Türkiye'nin önde gelen hukuk bürolarından birinde tamamladıktan sonra 2013 yılında kendi ofisi olan Maaşoğlu Hukuk ve Danışmanlık'ı kurmuştur. O tarihten bu yana, özellikle Ceza Hukuku, Aile Hukuku ve Miras Hukuku alanlarında uzmanlaşarak yüzlerce müvekkiline başarıyla hizmet vermiştir.</p>
+            
+            <div class="border-t border-gray-200 pt-6">
+                <h3 class="text-2xl font-serif font-semibold text-slate-800 mb-4">Felsefemiz</h3>
+                <p>Müvekkillerimize sadece hukuki bir hizmet sunmanın ötesinde, onların en zor zamanlarında güvenebilecekleri bir yol arkadaşı olmayı hedefliyoruz. Her davayı kendi davamız gibi sahiplenir, şeffaflık, dürüstlük ve gizlilik ilkelerinden asla ödün vermeyiz. Amacımız, adalete giden yolda en etkili ve hızlı çözümleri üretmektir.</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================== -->
+  <!--             FOOTER (ALT BİLGİ)     -->
+  <!-- ================================== -->
+  <footer class="bg-slate-900 py-10 text-center text-sm text-gray-400">
+    <p>© 2025 Maaşoğlu Hukuk ve Danışmanlık. Tüm hakları saklıdır.</p>
+    <p class="mt-2 max-w-2xl mx-auto px-4">Bu web sitesi, Türkiye Barolar Birliği'nin Avukatlık Meslek Kuralları ve Reklam Yasağı Yönetmeliği'ne uygun olarak hazırlanmıştır.</p>
+  </footer>
+
+</body>
+</html>

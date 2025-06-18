@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hizmet Alanları | Avukat Metin Maaşoğlu</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sans': ['Lato', 'sans-serif'],
+            'serif': ['Merriweather', 'serif'],
+          },
+          colors: {
+            'brand-gold': '#c0a062',
+          }
+        }
+      }
+    }
+  </script>
+
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- ================================== -->
+  <!--        NAVİGASYON ÇUBUĞU           -->
+  <!-- ================================== -->
+  <header id="navbar" class="sticky top-0 left-0 w-full py-4 px-8 flex justify-between items-center z-50 transition-colors duration-300 bg-slate-900 shadow-lg">
+    <a href="index.html" class="flex items-center space-x-3">
+      <svg class="h-8 w-8 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3.75v16.5"/>
+      </svg>
+      <span class="text-xl font-bold text-white font-serif">Maaşoğlu Hukuk</span>
+    </a>
+    <nav class="hidden md:flex space-x-8 text-sm font-medium">
+      <a href="index.html" class="text-white hover:text-brand-gold transition-colors">Ana Sayfa</a>
+      <a href="about.html" class="text-white hover:text-brand-gold transition-colors">Hakkımda</a>
+      <a href="services.html" class="text-white hover:text-brand-gold transition-colors">Hizmet Alanları</a>
+      <a href="articles.html" class="text-white hover:text-brand-gold transition-colors">Makaleler</a>
+      <a href="contact.html" class="text-white hover:text-brand-gold transition-colors">İletişim</a>
+    </nav>
+  </header>
+
+  <!-- ================================== -->
+  <!--        SAYFA BAŞLIĞI BÖLÜMÜ        -->
+  <!-- ================================== -->
+  <section class="pt-24 pb-16 bg-gradient-to-br from-slate-900 to-slate-800 text-center text-white">
+    <div class="max-w-4xl mx-auto px-6">
+      <h1 class="text-4xl md:text-5xl font-bold font-serif">Hizmet Alanlarımız</h1>
+      <p class="mt-4 text-lg text-gray-300">Müvekkillerimize sunduğumuz başlıca hukuki danışmanlık ve avukatlık hizmetleri.</p>
+    </div>
+  </section>
+
+  <!-- ================================== -->
+  <!--      DETAYLI HİZMET KARTLARI       -->
+  <!-- ================================== -->
+  <section class="py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Kart 1: Ceza Hukuku -->
+        <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+          <div class="flex items-center justify-center h-16 w-16 rounded-full bg-brand-gold/10 mb-6">
+            <svg class="h-8 w-8 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+          </div>
+          <h3 class="text-2xl font-serif font-semibold text-slate-900 mb-3">Ceza Hukuku</h3>
+          <p class="text-gray-600 leading-relaxed">Soruşturma ve kovuşturma aşamalarının her anında, şüpheli, sanık veya müşteki vekili olarak etkili savunma ve hukuki destek sağlıyoruz.</p>
+        </div>
+        
+        <!-- Kart 2: Aile Hukuku -->
+        <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+          <div class="flex items-center justify-center h-16 w-16 rounded-full bg-brand-gold/10 mb-6">
+            <svg class="h-8 w-8 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+          </div>
+          <h3 class="text-2xl font-serif font-semibold text-slate-900 mb-3">Aile Hukuku</h3>
+          <p class="text-gray-600 leading-relaxed">Anlaşmalı ve çekişmeli boşanma, velayet, nafaka, mal rejimi tasfiyesi ve soybağı davaları gibi hassas konularda yanınızdayız.</p>
+        </div>
+
+        <!-- Kart 3: Miras Hukuku -->
+        <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+          <div class="flex items-center justify-center h-16 w-16 rounded-full bg-brand-gold/10 mb-6">
+            <svg class="h-8 w-8 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+          </div>
+          <h3 class="text-2xl font-serif font-semibold text-slate-900 mb-3">Miras Hukuku</h3>
+          <p class="text-gray-600 leading-relaxed">Vasiyetname hazırlanması, veraset ilamı alınması, tenkis davası, mirasın reddi ve miras paylaşımı gibi konularda danışmanlık hizmeti sunuyoruz.</p>
+        </div>
+
+        <!-- Kart 4: İş Hukuku -->
+        <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-brand-gold/10 mb-6">
+                <svg class="h-8 w-8 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+            </div>
+            <h3 class="text-2xl font-serif font-semibold text-slate-900 mb-3">İş Hukuku</h3>
+            <p class="text-gray-600 leading-relaxed">İşe iade davaları, kıdem ve ihbar tazminatı alacakları, iş kazaları ve hizmet tespiti konularında hem işçi hem de işveren vekilliği yapıyoruz.</p>
+        </div>
+
+        <!-- Kart 5: Gayrimenkul Hukuku -->
+        <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-brand-gold/10 mb-6">
+                <svg class="h-8 w-8 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.21 15.869l-6.364-6.364a2 2 0 00-2.828 0l-6.364 6.364a2 2 0 000 2.828l6.364 6.364a2 2 0 002.828 0l6.364-6.364a2 2 0 000-2.828z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3l3.586 3.586" /></svg>
+            </div>
+            <h3 class="text-2xl font-serif font-semibold text-slate-900 mb-3">Gayrimenkul Hukuku</h3>
+            <p class="text-gray-600 leading-relaxed">Tapu iptal ve tescil davaları, kira uyuşmazlıkları, kamulaştırma ve ortaklığın giderilmesi (izale-i şuyu) davalarında hukuki destek sağlıyoruz.</p>
+        </div>
+
+        <!-- Kart 6: Bilişim Hukuku -->
+        <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-brand-gold/10 mb-6">
+                <svg class="h-8 w-8 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+            </div>
+            <h3 class="text-2xl font-serif font-semibold text-slate-900 mb-3">Bilişim Hukuku</h3>
+            <p class="text-gray-600 leading-relaxed">Sosyal medya yoluyla işlenen suçlar, e-ticaret uyuşmazlıkları, kişisel verilerin korunması (KVKK) ve bilişim suçları konularında danışmanlık.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================== -->
+  <!--             FOOTER (ALT BİLGİ)     -->
+  <!-- ================================== -->
+  <footer class="bg-slate-900 py-10 text-center text-sm text-gray-400">
+    <p>© 2025 Maaşoğlu Hukuk ve Danışmanlık. Tüm hakları saklıdır.</p>
+    <p class="mt-2 max-w-2xl mx-auto px-4">
+      Bu web sitesi, Türkiye Barolar Birliği'nin Avukatlık Meslek Kuralları ve Reklam Yasağı Yönetmeliği'ne uygun olarak hazırlanmıştır.
+    </p>
+  </footer>
+
+</body>
+</html>
