@@ -21,9 +21,25 @@
           },
           colors: {
             'brand-gold': '#c0a062',
-          }
+          },
+           typography: (theme) => ({
+            DEFAULT: {
+              css: {
+                color: theme('colors.gray.700'),
+                a: {
+                  color: theme('colors.brand-gold'),
+                  '&:hover': {
+                    color: theme('colors.slate.900'),
+                  },
+                },
+              },
+            },
+          }),
         }
-      }
+      },
+       plugins: [
+        require('@tailwindcss/typography'),
+      ],
     }
   </script>
   <!-- Markdown formatını HTML'e çevirmek için 'marked' kütüphanesi -->
@@ -98,33 +114,47 @@
         
         const articlePromises = files
           .filter(file => file.type === 'file' && file.name.endsWith('.md'))
-          .map(file => fetch(file.download_url).then(res => res.text()));
-
-        const articleContents = await Promise.all(articlePromises);
+          .map(file => fetch(file.download_url).then(async res => ({
+            content: await res.text(),
+            filename: file.name
+          })));
         
+        const articleDataList = await Promise.all(articlePromises);
         let articlesHTML = '';
-        for (const content of articleContents) {
+
+        // Makaleleri tarihe göre en yeniden en eskiye sırala
+        articleDataList.sort((a, b) => {
+          const dateA = new Date(a.content.split('---')[1].match(/date:\s*(.*)/)[1]);
+          const dateB = new Date(b.content.split('---')[1].match(/date:\s*(.*)/)[1]);
+          return dateB - dateA;
+        });
+
+        for (const articleData of articleDataList) {
+            const { content, filename } = articleData;
+            const slug = filename.replace('.md', '');
+
             const parts = content.split('---');
             const frontmatterText = parts[1];
-            const bodyMarkdown = parts.slice(2).join('---').trim();
             
             const frontmatter = {};
             frontmatterText.trim().split('\n').forEach(line => {
                 const [key, ...valueParts] = line.split(':');
-                frontmatter[key.trim()] = valueParts.join(':').trim().replace(/^"|'|'(?=")|"$/g, '');
+                if (key) frontmatter[key.trim()] = valueParts.join(':').trim().replace(/^"|'|'(?=")|"$/g, '');
             });
 
             const formattedDate = luxon.DateTime.fromISO(frontmatter.date).setLocale('tr').toFormat('dd MMMM yyyy');
-            
+            const articleUrl = `article.html?slug=${slug}`;
+
             articlesHTML += `
               <article class="bg-white p-8 rounded-lg shadow-lg">
                 <p class="text-sm text-gray-500 mb-2">${formattedDate}</p>
                 <h2 class="text-3xl font-serif font-bold mb-4">
-                  <a href="#" class="text-slate-900 hover:text-brand-gold transition-colors">${frontmatter.title}</a>
+                  <a href="${articleUrl}" class="text-slate-900 hover:text-brand-gold transition-colors">${frontmatter.title}</a>
                 </h2>
-                <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
-                  ${marked.parse(frontmatter.description || '')}
+                <div class="prose max-w-none text-gray-700 leading-relaxed">
+                  <p>${frontmatter.description || ''}</p>
                 </div>
+                <a href="${articleUrl}" class="font-bold text-brand-gold hover:underline mt-4 inline-block">Devamını Oku →</a>
               </article>
             `;
         }
@@ -133,7 +163,7 @@
 
       } catch (error) {
         console.error('Makaleler yüklenirken bir hata oluştu:', error);
-        container.innerHTML = '<p class="text-center text-red-500">Makaleler yüklenemedi. GitHub API limiti aşılmış olabilir veya depo gizli olabilir.</p>';
+        container.innerHTML = '<p class="text-center text-red-500">Makaleler yüklenemedi. Lütfen daha sonra tekrar deneyin.</p>';
       }
     }
 
