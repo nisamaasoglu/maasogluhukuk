@@ -1,17 +1,20 @@
 backend:
   name: git-gateway
-  branch: main # Deponuzun ana dalı 'main' ise böyle bırakın, 'master' ise 'master' yapın.
+  branch: main
 
-media_folder: "assets/images/uploads" # Yüklenecek resimlerin kaydedileceği yer
-public_folder: "/assets/images/uploads" # Sitede resimlerin görüneceği yol
+display_url: https://maasogluhukuk.netlify.app/
+logo_url: https://maasogluhukuk.app/logo.svg
+
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
 
 collections:
-  - name: "articles" # Koleksiyonun adı
-    label: "Makaleler" # Panelde görünecek etiket
-    folder: "_articles" # Makalelerin kaydedileceği klasör
-    create: true # Yeni makale eklemeye izin ver
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Dosya adı formatı
-    fields: # Makale eklerken doldurulacak alanlar
+  - name: "articles"
+    label: "Makaleler"
+    folder: "_articles"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
       - {label: "Başlık", name: "title", widget: "string"}
       - {label: "Yayın Tarihi", name: "date", widget: "datetime"}
       - {label: "Kapak Fotoğrafı", name: "thumbnail", widget: "image", required: false}

@@ -7,11 +7,11 @@
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
-  <!-- Decap CMS'i yüklemek için -->
+  <!-- Stabil bir CMS sürümü yüklüyoruz -->
   <script src="https://unpkg.com/decap-cms@3.1.10/dist/decap-cms.js"></script>
-  <!-- Yapılandırma dosyamızı yüklemek için -->
+  <!-- CMS'i en sade haliyle başlatıyoruz -->
   <script>
-    CMS.init({ config: { "config-file": "/admin/config.yml" } });
+    CMS.init();
   </script>
 </body>
 </html>
