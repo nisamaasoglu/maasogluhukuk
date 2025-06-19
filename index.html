@@ -50,31 +50,30 @@
   <!-- ================================== -->
   <!--   YENİ, ASİMETRİK KARŞILAMA BÖLÜMÜ   -->
   <!-- ================================== -->
-  <section class="relative min-h-screen w-full flex items-center bg-gradient-to-br from-slate-900 to-slate-800 overflow-hidden">
-    <div class="w-full max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-      
-      <!-- Sol Taraf: Metin Alanı -->
-      <div class="text-center md:text-left z-10">
-        <h1 class="text-5xl lg:text-6xl font-bold font-serif text-white leading-tight">
-          Avukat Metin Maaşoğlu
-        </h1>
-        <p class="mt-4 text-lg md:text-xl text-gray-300 max-w-lg">
-          Hukuki ihtiyaçlarınız için modern, etkili ve güvenilir çözümler.
-        </p>
-        <a href="contact.html" class="mt-8 inline-block px-10 py-4 border-2 border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-slate-900 rounded-md text-lg font-bold transition-all transform hover:scale-105">
-          İletişime Geçin
-        </a>
-      </div>
+    <!-- ================================== -->
+  <!--   TAM EKRAN GÖRSEL KARŞILAMA BÖLÜMÜ   -->
+  <!-- ================================== -->
+  <section class="relative h-screen w-full flex items-center justify-center text-center overflow-hidden">
+    <!-- Arka Plan Görseli Katmanı -->
+    <div class="absolute top-0 left-0 w-full h-full bg-cover bg-center" 
+         style="background-image: url('https://images.unsplash.com/photo-1542188220-56113835678b?q=80&w=1920&auto=format&fit=crop');">
+    </div>
 
-      <!-- Sağ Taraf: Görsel Alanı -->
-      <div class="relative flex justify-center items-center h-full">
-        <div class="w-full max-w-sm md:max-w-md lg:max-w-lg">
-           <!-- BURAYA KENDİ FOTOĞRAFINIZI KOYUN! Arka planı silinmiş .png formatı en iyi sonucu verir. -->
-           <img src="indexphoto.jpg" 
-                alt="Avukat Metin Maaşoğlu" 
-                class="w-full h-auto object-contain drop-shadow-2xl">
-        </div>
-      </div>
+    <!-- Efekt Katmanı (Karartma ve Hafif Bulanıklık) -->
+    <!-- `backdrop-blur-sm` ile bulanıklık, `bg-slate-900/70` ile %70 karartma ekledik. -->
+    <div class="absolute top-0 left-0 w-full h-full bg-slate-900/70 backdrop-blur-sm z-10"></div>
+    
+    <!-- Metin İçeriği Katmanı -->
+    <div class="relative z-20 text-white px-6">
+      <h1 class="text-5xl md:text-7xl font-bold font-serif leading-tight">
+        Avukat Metin Maaşoğlu
+      </h1>
+      <p class="mt-4 text-lg md:text-xl max-w-2xl mx-auto text-gray-200">
+        Hukuki ihtiyaçlarınız için modern, etkili ve güvenilir çözümler.
+      </p>
+      <a href="contact.html" class="mt-8 inline-block px-10 py-4 border-2 border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-slate-900 rounded-md text-lg font-bold transition-all transform hover:scale-105">
+        İletişime Geçin
+      </a>
     </div>
   </section>
 
